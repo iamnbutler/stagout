@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Template</title>
+		<title>Pearls &amp; Bones EP | Pearls &amp; Bones</title>
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,16 +15,39 @@
 		<meta name="copyright" content="&copy; year name">
 
 		<link rel="icon" type="image/png" href="">
-		<link rel="stylesheet" href="stylesheets/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
 
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="stage">
+			<section id="home" class="section"></section>
+			<section id="about" class="section"></section>
+			<section id="events" class="section"></section>
+			<section id="gallery" class="section"></section>
+		</div>
+		<div class="overlay">
+			<nav class="nav">
+				<a href="#" class="logo">
+					<div class="icon"></div>
+					<div class="logo-text">sandy pearlman &amp; bones</div>
+				</a>
+				<a href="#about" id="hobos" class="link" data-link="about">about</a>
+				<a href="#events" class="link" data-link="events">events</a>
+				<a href="#gallery" class="link" data-link="gallery">gallery</a>
+				<a href="" class="link">download</a>
+			</nav>
+			<nav class="controls">
+				<div class="list"></div>
+				<div class="previous"></div>
+				<div class="play"></div>
+				<div class="next"></div>
+			</nav>
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 
-		<script src="js/scripts.js"></script>
+		<script src="js/scripts.min.js"></script>
 	</body>
 </html>
