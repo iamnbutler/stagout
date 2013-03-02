@@ -74,8 +74,8 @@ body {
 
 .icon {
   float: left;
-  width: 1em;
-  height: 1em; }
+  width: 80px;
+  height: 80px; }
 
 .nav a.link {
   float: left;
