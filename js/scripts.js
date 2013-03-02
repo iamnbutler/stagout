@@ -61,11 +61,14 @@ $(document).ready(function(){
 
 	//next button
 	$(".next").click(function(){
-		var nextsong = $(".trackselected").next();
+		if($('.trackselected').is(":last-child")){
+			var nextsong = $(".tracklist p").eq(0);
+		} else {
+			var nextsong = $(".trackselected").next();
+		}
     	var filepath = nextsong.data('url');
     	$('.tracklist p').not(nextsong).removeClass('trackselected');
 		$(nextsong).addClass('trackselected');
-    	console.log(filepath);
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
@@ -78,11 +81,14 @@ $(document).ready(function(){
 
 	//previous button
 	$(".previous").click(function(){
-		var nextsong = $(".trackselected").prev();
+		if($('.trackselected').is(":first-child")){
+			var nextsong = $(".tracklist p").last();
+		} else {
+			var nextsong = $(".trackselected").prev();
+		}
     	var filepath = nextsong.data('url');
     	$('.tracklist p').not(nextsong).removeClass('trackselected');
 		$(nextsong).addClass('trackselected');
-    	console.log(filepath);
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
