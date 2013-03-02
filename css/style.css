@@ -121,10 +121,17 @@ body {
 a.link:hover, .logo:hover {
   background-color: #d06200;
   color: #FFFFFF;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s; }
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
+.logo:hover .icon {
+  background: url(../img/logohover.png) center center no-repeat;
+  -webkit-background-size: 46px;
+  -moz-background-size: 46px;
+  -o-background-size: 46px;
+  background-size: 46px; }
 
 .controls {
   position: absolute;
