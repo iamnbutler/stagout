@@ -13,22 +13,75 @@ $(document).ready(function(){
 	});
 
 	//audio player
+	///////////////////////////
 	var music = new Audio('music/stagdout.mp3');
 
-	if (music.canPlayType('audio/mpeg;')) {
+	var filepath = $(".tracklist p").eq(0).data('url');
+    if (music.canPlayType('audio/mpeg;')) {
 	    music.type= 'audio/mpeg';
-	    music.src= 'music/stagdout.mp3';
-    } else {
+	    music.src= 'music/' + filepath + '.mp3';
+	} else {
 	    music.type= 'audio/ogg';
-	    music.src= 'music/stagdout.ogg';
-    }
+	    music.src= 'music/' + filepath + '.ogg';
+	}
 
+    //auto play
+    $(document).ready(function(){
+    	music.play();
+    	$(".play").toggleClass('playing');
+    })
+
+    //load songs from list
+    $(".tracklist p").click(function(){
+    	var filepath = $(this).data('url');
+    	$('.tracklist p').not(this).css("border-left", "none");
+		$(this).css("border-left", "#d06200 solid 8px");
+    	if (music.canPlayType('audio/mpeg;')) {
+		    music.type= 'audio/mpeg';
+		    music.src= 'music/' + filepath + '.mp3';
+	    } else {
+		    music.type= 'audio/ogg';
+		    music.src= 'music/' + filepath + '.ogg';
+	    }
+    	music.play();
+    });
+
+    //play and pause button
 	$(".play").click(function(){
 	  if (music.paused == true) {
 	      music.play();
+	      $(".play").toggleClass('playing');
 	  } else {
 	      music.pause();
+	      $(".play").toggleClass('playing');
 	  }
+	});
+
+	//next button
+	$(".next").click(function(){
+		//$(".tracklist p").find("[data-url='" + filepath + "']");
+    	//var filepath = $(this).data('url');
+    	if (music.canPlayType('audio/mpeg;')) {
+		    music.type= 'audio/mpeg';
+		    music.src= 'music/' + filepath + '.mp3';
+	    } else {
+		    music.type= 'audio/ogg';
+		    music.src= 'music/' + filepath + '.ogg';
+	    }
+    	music.play();
+	});
+
+	//previous button
+	$(".previous").click(function(){
+		//var filepath = $(this).data('url');
+    	if (music.canPlayType('audio/mpeg;')) {
+		    music.type= 'audio/mpeg';
+		    music.src= 'music/' + filepath + '.mp3';
+	    } else {
+		    music.type= 'audio/ogg';
+		    music.src= 'music/' + filepath + '.ogg';
+	    }
+    	music.play();
 	});
 
 	//list toggle
@@ -37,12 +90,7 @@ $(document).ready(function(){
 		$('.tracklist').toggle(400);
 	});
 
-	//track indicator
-	// try to use toggleclass here
-	$('.tracklist p').click(function(){
-		$('.tracklist p').not(this).css("border-left", "none");
-		$(this).css("border-left", "#d06200 solid 8px");
-	});
+
 
 
 });

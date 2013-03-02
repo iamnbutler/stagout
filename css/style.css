@@ -185,6 +185,11 @@ a.link:hover, .logo:hover {
   .play:hover {
     background-position: -128px; }
 
+.playing {
+  background-position: -256px; }
+  .playing:hover {
+    background-position: -256px; }
+
 .next {
   background-position: -192px; }
   .next:hover {
