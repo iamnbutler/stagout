@@ -36,6 +36,7 @@ $(document).ready(function(){
     	var filepath = $(this).data('url');
     	$('.tracklist p').not(this).css("border-left", "none");
 		$(this).css("border-left", "#d06200 solid 8px");
+		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
@@ -50,10 +51,10 @@ $(document).ready(function(){
 	$(".play").click(function(){
 	  if (music.paused == true) {
 	      music.play();
-	      $(".play").toggleClass('playing');
+	      $(".play").addClass('playing');
 	  } else {
 	      music.pause();
-	      $(".play").toggleClass('playing');
+	      $(".play").removeClass('playing');
 	  }
 	});
 

@@ -127,14 +127,14 @@ a.link:hover, .logo:hover{
 	}
 }
 .list{
-	background-position: 0px;
+	background-position: -128px;
 	&:hover{
-		background-position: 0px;
+		background-position: -128px;
 	}
 }
 .listselect{
 	background: url("../img/controlshover.png") no-repeat;
-	background-position: 0px;
+	background-position: -128px;
 	-webkit-background-size: auto 64px;
 	-moz-background-size: auto 64px;
 	background-size: auto 64px;
@@ -146,15 +146,21 @@ a.link:hover, .logo:hover{
 	}
 }
 .play{
-	background-position: -128px;
+	background-position: 0px;
 	&:hover{
-		background-position: -128px;
+		background-position: 0px;
 	}
 }
 .playing{
-	background-position: -256px;
+	background: url("../img/pause.png") no-repeat;
+	-webkit-background-size: auto 64px;
+	-moz-background-size: auto 64px;
+	background-size: auto 64px;
 	&:hover{
-		background-position: -256px;
+		background: url("../img/pausehover.png") no-repeat;
+		-webkit-background-size: auto 64px;
+		-moz-background-size: auto 64px;
+		background-size: auto 64px;
 	}
 }
 .next{
