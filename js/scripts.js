@@ -27,6 +27,7 @@ $(document).ready(function(){
 
     //auto play
     $(document).ready(function(){
+    	$(".controls").show();
     	music.play();
     	$(".play").toggleClass('playing');
     	$(".tracklist p").eq(0).addClass('trackselected');
@@ -69,6 +70,7 @@ $(document).ready(function(){
     	var filepath = nextsong.data('url');
     	$('.tracklist p').not(nextsong).removeClass('trackselected');
 		$(nextsong).addClass('trackselected');
+		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
@@ -89,6 +91,7 @@ $(document).ready(function(){
     	var filepath = nextsong.data('url');
     	$('.tracklist p').not(nextsong).removeClass('trackselected');
 		$(nextsong).addClass('trackselected');
+		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
@@ -104,8 +107,5 @@ $(document).ready(function(){
 		$(this).toggleClass('listselect');
 		$('.tracklist').toggle(400);
 	});
-
-
-
 
 });
