@@ -109,6 +109,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/sample2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/sample2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/sample2.jpg",
+      "initialSize" : 3194102,
+      "fileType" : 4096
+    },
     "\/js\/scripts.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -120,15 +131,15 @@
       "outputAbbreviatedPath" : "\/js\/scripts.min.min.js",
       "fileType" : 64
     },
-    "\/img\/sample2.jpg" : {
+    "\/img\/sample3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/sample2.jpg",
+      "inputAbbreviatedPath" : "\/img\/sample3.jpg",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/sample2.jpg",
-      "initialSize" : 3194102,
+      "outputAbbreviatedPath" : "\/img\/sample3.jpg",
+      "initialSize" : 660602,
       "fileType" : 4096
     }
   },
