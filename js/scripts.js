@@ -12,4 +12,9 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('.list').click(function(){
+		$(this).toggleClass('listselect');
+		$('.tracklist').toggle(400);
+	});
+
 });
