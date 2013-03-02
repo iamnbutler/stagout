@@ -2,8 +2,8 @@
 $(document).ready(function(){
 
 	function changeSection(dataLink) {
-		$('.section').stop().fadeOut(800);
-		$('#' + dataLink).delay(800).fadeIn(800);
+		$('.section').stop().fadeOut(400);
+		$('#' + dataLink).delay(300).fadeIn(800);
 	}
 
 	$('.nav .link').click(function(){

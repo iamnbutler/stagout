@@ -2,68 +2,6 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8248",
   "files" : {
-    "\/js\/scripts-ck.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/scripts-ck.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/scripts-ck.min.js",
-      "fileType" : 64
-    },
-    "\/js\/jquery-1.7.2.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery-1.7.2.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery-1.7.2.min.min.js",
-      "fileType" : 64
-    },
-    "\/img\/sample.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/sample.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/sample.jpg",
-      "initialSize" : 532437,
-      "fileType" : 4096
-    },
-    "\/js\/scripts.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/scripts.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/scripts.min.js",
-      "fileType" : 64
-    },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/css\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/scss\/style.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -76,17 +14,102 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/scss\/_typography.scss" : {
+    "\/img\/swag.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/swag.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/swag.jpg",
+      "initialSize" : 44666,
+      "fileType" : 4096
+    },
+    "\/img\/harryillustrated.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/harryillustrated.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/harryillustrated.jpg",
+      "initialSize" : 44234,
+      "fileType" : 4096
+    },
+    "\/img\/stagoutparty.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/stagoutparty.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/stagoutparty.jpg",
+      "initialSize" : 31391,
+      "fileType" : 4096
+    },
+    "\/img\/press.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/press.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/press.jpg",
+      "initialSize" : 33322,
+      "fileType" : 4096
+    },
+    "\/img\/sample3.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/sample3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/sample3.jpg",
+      "initialSize" : 660602,
+      "fileType" : 4096
+    },
+    "\/js\/jquery-1.7.2.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery-1.7.2.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery-1.7.2.min.min.js",
+      "fileType" : 64
+    },
+    "\/css\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scss\/_typography.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_typography.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/img\/blowingherb.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/blowingherb.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/blowingherb.jpg",
+      "initialSize" : 45544,
+      "fileType" : 4096
+    },
+    "\/img\/angrystag.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/angrystag.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/angrystag.jpg",
+      "initialSize" : 42395,
+      "fileType" : 4096
     },
     "\/scss\/_reset.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -100,17 +123,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/js\/scripts.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/scripts.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/scripts.min.min.js",
-      "fileType" : 64
-    },
     "\/img\/sample2.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -122,15 +134,232 @@
       "initialSize" : 3194102,
       "fileType" : 4096
     },
-    "\/img\/sample3.jpg" : {
+    "\/scss\/_typography.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scss\/_typography.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_typography.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/js\/scripts-ck.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/scripts-ck.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/scripts-ck.min.js",
+      "fileType" : 64
+    },
+    "\/img\/controlshover.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/sample3.jpg",
+      "inputAbbreviatedPath" : "\/img\/controlshover.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/sample3.jpg",
-      "initialSize" : 660602,
+      "outputAbbreviatedPath" : "\/img\/controlshover.png",
+      "initialSize" : 2753,
+      "fileType" : 8192
+    },
+    "\/img\/jakemgk2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/jakemgk2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/jakemgk2.jpg",
+      "initialSize" : 23648,
+      "fileType" : 4096
+    },
+    "\/img\/jakemgk.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/jakemgk.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/jakemgk.jpg",
+      "initialSize" : 23616,
+      "fileType" : 4096
+    },
+    "\/img\/harrymgk.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/harrymgk.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/harrymgk.jpg",
+      "initialSize" : 18432,
+      "fileType" : 4096
+    },
+    "\/img\/stagoutjake.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
+      "initialSize" : 30110,
+      "fileType" : 4096
+    },
+    "\/js\/scripts.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/scripts.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/scripts.min.min.js",
+      "fileType" : 64
+    },
+    "\/img\/epcover.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/epcover.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/epcover.jpg",
+      "initialSize" : 50196,
+      "fileType" : 4096
+    },
+    "\/img\/harrymgk2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/harrymgk2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/harrymgk2.jpg",
+      "initialSize" : 22695,
+      "fileType" : 4096
+    },
+    "\/img\/plaid.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/plaid.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/plaid.jpg",
+      "initialSize" : 26517,
+      "fileType" : 4096
+    },
+    "\/img\/fisheye.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/fisheye.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/fisheye.jpg",
+      "initialSize" : 32111,
+      "fileType" : 4096
+    },
+    "\/js\/scripts.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/scripts.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/scripts.min.js",
+      "fileType" : 64
+    },
+    "\/img\/fisheye2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/fisheye2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/fisheye2.jpg",
+      "initialSize" : 46098,
+      "fileType" : 4096
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/img\/logo.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/logo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/logo.png",
+      "initialSize" : 5900,
+      "fileType" : 8192
+    },
+    "\/img\/jakeillustrated.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/jakeillustrated.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/jakeillustrated.jpg",
+      "initialSize" : 39892,
+      "fileType" : 4096
+    },
+    "\/img\/sample.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/sample.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/sample.jpg",
+      "initialSize" : 532437,
+      "fileType" : 4096
+    },
+    "\/img\/controls.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/controls.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/controls.png",
+      "initialSize" : 2743,
+      "fileType" : 8192
+    },
+    "\/stylesheets\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/stylesheets\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/img\/mgkcrowd.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/mgkcrowd.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/mgkcrowd.jpg",
+      "initialSize" : 24894,
       "fileType" : 4096
     }
   },
