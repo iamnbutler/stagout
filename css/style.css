@@ -231,7 +231,7 @@ a.link:hover, .logo:hover {
       color: #d06200;
       cursor: pointer; }
 
-.tracklist p:first-child {
+.trackselected {
   border-left: #d06200 solid 8px; }
 
 #about, #events, #gallery {

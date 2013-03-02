@@ -29,13 +29,14 @@ $(document).ready(function(){
     $(document).ready(function(){
     	music.play();
     	$(".play").toggleClass('playing');
+    	$(".tracklist p").eq(0).addClass('trackselected');
     })
 
     //load songs from list
     $(".tracklist p").click(function(){
     	var filepath = $(this).data('url');
-    	$('.tracklist p').not(this).css("border-left", "none");
-		$(this).css("border-left", "#d06200 solid 8px");
+    	$('.tracklist p').not(this).removeClass('trackselected');
+		$(this).addClass('trackselected');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
@@ -60,8 +61,11 @@ $(document).ready(function(){
 
 	//next button
 	$(".next").click(function(){
-		//$(".tracklist p").find("[data-url='" + filepath + "']");
-    	//var filepath = $(this).data('url');
+		var nextsong = $(".trackselected").next();
+    	var filepath = nextsong.data('url');
+    	$('.tracklist p').not(nextsong).removeClass('trackselected');
+		$(nextsong).addClass('trackselected');
+    	console.log(filepath);
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
@@ -74,7 +78,11 @@ $(document).ready(function(){
 
 	//previous button
 	$(".previous").click(function(){
-		//var filepath = $(this).data('url');
+		var nextsong = $(".trackselected").prev();
+    	var filepath = nextsong.data('url');
+    	$('.tracklist p').not(nextsong).removeClass('trackselected');
+		$(nextsong).addClass('trackselected');
+    	console.log(filepath);
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
 		    music.src= 'music/' + filepath + '.mp3';
