@@ -156,6 +156,11 @@ a.link:hover, .logo:hover{
 	-webkit-background-size: auto 64px;
 	-moz-background-size: auto 64px;
 	background-size: auto 64px;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
 	&:hover{
 		background: url("../img/pausehover.png") no-repeat;
 		-webkit-background-size: auto 64px;
