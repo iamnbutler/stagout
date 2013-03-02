@@ -106,11 +106,7 @@ a.link:hover, .logo:hover{
 	height: 64px;
 	width: 256px;
 }
-.list, .previous, .play, .next{
-	background: url("../img/controls.png") no-repeat;
-	-webkit-background-size: auto 64px;
-	-moz-background-size: auto 64px;
-	background-size: auto 64px;
+.list, .previous, .next, .play, .playing{
 	float: left;
 	height: 64px;
 	width: 64px;
@@ -119,59 +115,66 @@ a.link:hover, .logo:hover{
 	-ms-transition: 0.4s;
 	-o-transition: 0.4s;
 	transition: 0.4s;
+}
+.list, .previous, .next{
+	background: url("../img/controls.png") no-repeat;
+	-webkit-background-size: 192px 64px;
+	-moz-background-size: 192px 64px;
+	background-size: 192px 64px;
 	&:hover{
 		background: url("../img/controlshover.png") no-repeat;
-		-webkit-background-size: auto 64px;
-		-moz-background-size: auto 64px;
-		background-size: auto 64px;
+		-webkit-background-size: 192px 64px;
+		-moz-background-size: 192px 64px;
+		background-size: 192px 64px;
 	}
 }
 .list{
-	background-position: -128px;
-	&:hover{
-		background-position: -128px;
-	}
-}
-.listselect{
-	background: url("../img/controlshover.png") no-repeat;
-	background-position: -128px;
-	-webkit-background-size: auto 64px;
-	-moz-background-size: auto 64px;
-	background-size: auto 64px;
-}
-.previous{
 	background-position: -64px;
 	&:hover{
 		background-position: -64px;
 	}
 }
-.play{
+.listselect{
+	background: url("../img/controlshover.png") no-repeat;
+	background-position: -64px;
+	-webkit-background-size: 192px 64px;
+	-moz-background-size: 192px 64px;
+	background-size: 192px 64px;
+}
+.previous{
 	background-position: 0px;
 	&:hover{
 		background-position: 0px;
 	}
 }
+.play{
+	background: url("../img/play.png") no-repeat;
+	-webkit-background-size: 64px;
+	-moz-background-size: 64px;
+	background-size: 64px;
+	&:hover{
+		background: url("../img/playhover.png") no-repeat;
+		-webkit-background-size: 64px;
+		-moz-background-size: 64px;
+		background-size: 64px;
+	}	
+}
 .playing{
 	background: url("../img/pause.png") no-repeat;
-	-webkit-background-size: auto 64px;
-	-moz-background-size: auto 64px;
-	background-size: auto 64px;
-	-webkit-transition: 0.4s;
-	-moz-transition: 0.4s;
-	-ms-transition: 0.4s;
-	-o-transition: 0.4s;
-	transition: 0.4s;
+	-webkit-background-size: 64px;
+	-moz-background-size: 64px;
+	background-size: 64px;
 	&:hover{
 		background: url("../img/pausehover.png") no-repeat;
-		-webkit-background-size: auto 64px;
-		-moz-background-size: auto 64px;
-		background-size: auto 64px;
+		-webkit-background-size: 64px;
+		-moz-background-size: 64px;
+		background-size: 64px;
 	}
 }
 .next{
-	background-position: -192px;
+	background-position: -128px;
 	&:hover{
-		background-position: -192px;
+		background-position: -128px;
 	}
 }
 .tracklist{
