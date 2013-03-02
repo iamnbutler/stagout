@@ -31,7 +31,15 @@ body {
 .nav {
 	width: 100%;
 	height: 4em;
-	background-color: white;
+	background-color: #FFFFFF;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5MCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 10%, rgba(229,229,229,1) 90%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,rgba(255,255,255,1)), color-stop(90%,rgba(229,229,229,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 10%,rgba(229,229,229,1) 90%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 10%,rgba(229,229,229,1) 90%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 10%,rgba(229,229,229,1) 90%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 10%,rgba(229,229,229,1) 90%,rgba(204,204,204,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
 	position: fixed;
 }
 
@@ -50,11 +58,12 @@ body {
 	float: left;
 	text-decoration: none;
 	font-size: 0.9em;
-	padding: 1.7em 1.3em;
-	-webkit-transition: 0.8s;
-	-moz-transition: 0.8s;
-	-o-transition: 0.8s;
-	transition: 0.8s;
+	margin-top: 0.7em;
+	padding: 1em 1.3em 1.7em 1.3em;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
 }
 
 .logo-text {
@@ -70,7 +79,8 @@ body {
 }
 
 a.link:hover, .logo:hover {
-	background-color: #F1F1F1;
+	background-color: #d06200;
+	color: #FFFFFF;
 	-webkit-transition: 0.8s;
 	-moz-transition: 0.8s;
 	-o-transition: 0.8s;
@@ -160,7 +170,9 @@ a.link:hover, .logo:hover {
 		}
 	}
 }
-
+.trackselected{
+	background-color: red;
+}
 // Sections
 
 #about, #events, #gallery {
