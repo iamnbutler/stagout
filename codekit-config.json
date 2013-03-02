@@ -201,17 +201,6 @@
       "initialSize" : 18432,
       "fileType" : 4096
     },
-    "\/img\/stagoutjake.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
-      "initialSize" : 30110,
-      "fileType" : 4096
-    },
     "\/js\/scripts.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -232,6 +221,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/epcover.jpg",
       "initialSize" : 50196,
+      "fileType" : 4096
+    },
+    "\/img\/stagoutjake.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/stagoutjake.jpg",
+      "initialSize" : 30110,
       "fileType" : 4096
     },
     "\/img\/harrymgk2.jpg" : {
