@@ -12,6 +12,25 @@ $(document).ready(function(){
 		return false;
 	});
 
+	//audio player
+	var music = new Audio('music/stagdout.mp3');
+
+	if (music.canPlayType('audio/mpeg;')) {
+	    music.type= 'audio/mpeg';
+	    music.src= 'music/stagdout.mp3';
+    } else {
+	    music.type= 'audio/ogg';
+	    music.src= 'music/stagdout.ogg';
+    }
+
+	$(".play").click(function(){
+	  if (music.paused == true) {
+	      music.play();
+	  } else {
+	      music.pause();
+	  }
+	});
+
 	//list toggle
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
@@ -19,10 +38,11 @@ $(document).ready(function(){
 	});
 
 	//track indicator
-	// try to use addclass here
+	// try to use toggleclass here
 	$('.tracklist p').click(function(){
 		$('.tracklist p').not(this).css("border-left", "none");
 		$(this).css("border-left", "#d06200 solid 8px");
 	});
+
 
 });

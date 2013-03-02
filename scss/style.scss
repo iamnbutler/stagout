@@ -92,6 +92,10 @@ a.link:hover, .logo:hover{
 	-moz-background-size: 46px;
 	-o-background-size: 46px;
 	background-size: 46px;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
 }
 
 // music player
@@ -177,9 +181,10 @@ a.link:hover, .logo:hover{
 		}
 	}
 }
-.trackselected{
-	background-color: red;
+.tracklist p:first-child{
+	border-left: #d06200 solid 8px;
 }
+
 // Sections
 
 #about, #events, #gallery {
