@@ -115,42 +115,37 @@ a.link:hover, .logo:hover{
 
 .previous{
 	background-position: 0 0;
+	&:hover{
+		background-position: 0 -48px;
+	}
 }
 
-.previous:hover {
-	background-position: 0 -48px;
-}
-
-.play {
-	background-position: -48px 0;
-}
-
-.play:hover {
-	background-position: -48px -48px;
+.play{
+	background-position: -192px 0;
+	&:hover{
+		background-position: -192px -48px;
+	}
 }
 
 .next{
 	background-position: -96px 0;
-}
-
-.next:hover {
-	background-position: -96px -48px;
+	&:hover{
+		background-position: -96px -48px;
+	}
 }
 
 .list{
 	background-position: -144px 0;
-}
-
-.list:hover {
-	background-position: -144px -48px;
+	&:hover{
+		background-position: -144px -48px;
+	}
 }
 
 .playing {
-	background-position: -192px 0;
-}
-
-.playing:hover {
-	background-position: -192px -48px;
+	background-position: -48px 0;
+	&:hover{
+		background-position: -48px -48px;
+	}
 }
 
 .tracklist{

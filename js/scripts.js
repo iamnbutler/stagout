@@ -29,7 +29,7 @@ $(document).ready(function(){
     $(document).ready(function(){
     	$(".controls").show();
     	music.play();
-    	$(".play").toggleClass('playing');
+    	$(".play").addClass('playing');
     	$(".tracklist p").eq(0).addClass('trackselected');
     })
 
