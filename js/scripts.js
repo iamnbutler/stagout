@@ -105,7 +105,7 @@ $(document).ready(function(){
 	//list toggle
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
-		$('.tracklist').toggle(400);
+		$('.tracklist').show();
 	});
 
 });

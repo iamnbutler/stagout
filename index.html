@@ -30,7 +30,6 @@
 			<nav class="nav">
 				<a href="/" class="logo">
 					<div class="icon"></div>
-					<div class="logo-text">sandy pearlman &amp; bones</div>
 				</a>
 				<a href="#about" id="hobos" class="link" data-link="about">about</a>
 				<a href="#events" class="link" data-link="events">events</a>
@@ -38,18 +37,42 @@
 				<a href="" class="link">download</a>
 			</nav>
 			<nav class="controls">
-				<div class="list" id="list"></div>
-				<div class="previous"></div>
-				<div class="play"></div>
-				<div class="next"></div>
-				<div class="tracklist">
-					<p data-url="stagdout">Stag&apos;d Out</p>
-					<p data-url="boneyard">Boneyard</p>
-					<p data-url="citylife">City Life</p>
-					<p data-url="gameofthrones">Game of Thrones</p>
-					<p data-url="timtebow">Tim Tebow</p>
+				<div class="now-playing">
+					
 				</div>
+				<div class="player previous"></div>
+				<div class="player play"></div>
+				<div class="player next"></div>
+				<div class="player list" id="list"></div>
+				<ul class="tracklist">
+					<li>
+						<div class="album"></div>
+						<p class="track" data-url="stagdout">Stag&apos;d Out</p>
+						<div class="status"></div>
+					</li>
+					<li>
+						<div class="album"></div>
+						<p class="track" data-url="boneyard">Boneyard</p>
+						<div class="status"></div>
+					</li>
+					<li>
+						<div class="album"></div>
+						<p class="track" data-url="citylife">City Life</p>
+						<div class="status"></div>
+					</li>
+					<li>
+						<div class="album"></div>
+						<p class="track" data-url="gameofthrones">Game of Thrones</p>
+						<div class="status"></div>
+					</li>
+					<li>
+						<div class="album"></div>
+						<p class="track" data-url="timtebow">Tim Tebow</p>
+						<div class="status"></div>
+					</li>
+				</ul>
 			</nav>
+			<footer class="footer"></footer>
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
