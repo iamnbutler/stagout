@@ -1,12 +1,18 @@
-// Reset
+/* ============================================
+   Reset
+   ============================================ */
 
 @import "_reset.scss";
 
-// Typography
+/* ============================================
+   Typography
+   ============================================ */
 
 @import "_typography.scss";
 
-// Styles
+/* ============================================
+   Styles
+   ============================================ */
 
 html, body {
 	overflow: hidden;
@@ -30,7 +36,9 @@ body {
 	height: 100%;
 }
 
-// Nav
+/* ============================================
+   Nav
+   ============================================ */
 
 .nav {
 	width: 100%;
@@ -78,7 +86,10 @@ a.link:hover, .logo:hover{
 	background-color: #EFEFEF;
 }
 
-// music player
+/* ============================================
+   Music Player
+   ============================================ */
+
 .controls{
 	position: absolute;
 	right: 0px;
@@ -173,7 +184,7 @@ a.link:hover, .logo:hover{
 	}
 }
 .trackselected .status {
-	// PLaying gif goes here
+	// Playing gif goes here
 }
 
 .footer {
@@ -186,7 +197,9 @@ a.link:hover, .logo:hover{
 	left: 0;
 }
 
-// Sections
+/* ============================================
+   Sections
+   ============================================ */
 
 #about, #events, #gallery {
 	display: none;
@@ -215,23 +228,33 @@ a.link:hover, .logo:hover{
 	background-color: #EFEFEF;
 }
 
-#about {
-	background: url(../img/sample2.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
+	/* ============================================
+	   About
+	   ============================================ */
 
-#events {
-	background: url(../img/sample3.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
+	#about {
+		background: url(../img/sample2.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 
-// Misc
+	/* ============================================
+	   Events
+	   ============================================ */
+	
+	#events {
+		background: url(../img/sample3.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+/* ============================================
+   Misc
+   ============================================ */
 
 .clearfix:after {
   content: ".";
