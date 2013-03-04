@@ -14,9 +14,8 @@ $(document).ready(function(){
 
 	//audio player
 	///////////////////////////
-	var music = new Audio('music/stagdout.mp3');
-
 	var filepath = $(".tracklist p").eq(0).data('url');
+	var music = new Audio(filepath);
     if (music.canPlayType('audio/mpeg;')) {
 	    music.type= 'audio/mpeg';
 	    music.src= 'music/' + filepath + '.mp3';
@@ -27,7 +26,6 @@ $(document).ready(function(){
 
     //auto play
     $(document).ready(function(){
-    	$(".controls").show();
     	music.play();
     	$(".play").addClass('playing');
     	$(".tracklist p").eq(0).addClass('trackselected');
@@ -68,8 +66,9 @@ $(document).ready(function(){
 			var nextsong = $(".trackselected").next();
 		}
     	var filepath = nextsong.data('url');
-    	$('.tracklist p').not(nextsong).removeClass('trackselected');
-		$(nextsong).addClass('trackselected');
+    	console.log(filepath);
+    	//$('.tracklist p').not(nextsong).removeClass('trackselected');
+		//$(nextsong).addClass('trackselected');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
