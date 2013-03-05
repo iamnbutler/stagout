@@ -91,14 +91,15 @@ a:hover, a:active {
 /* line 17, ../scss/style.scss */
 html, body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-/* line 21, ../scss/style.scss */
+/* line 22, ../scss/style.scss */
 html {
   height: 100%;
 }
 
-/* line 25, ../scss/style.scss */
+/* line 26, ../scss/style.scss */
 body {
   background-color: #EFEFEF;
   width: 100%;
@@ -108,7 +109,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 34, ../scss/style.scss */
+/* line 35, ../scss/style.scss */
 .section {
   width: 100%;
   min-height: 100%;
@@ -117,7 +118,7 @@ body {
 /* ============================================
    Nav
    ============================================ */
-/* line 43, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .nav {
   width: 100%;
   height: 4em;
@@ -127,7 +128,7 @@ body {
   z-index: 2;
 }
 
-/* line 52, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .icon {
   float: left;
   width: 64px;
@@ -139,7 +140,7 @@ body {
   background-size: 46px;
 }
 
-/* line 63, ../scss/style.scss */
+/* line 64, ../scss/style.scss */
 .nav a.link {
   float: left;
   text-decoration: none;
@@ -151,7 +152,7 @@ body {
   transition: 0.4s;
 }
 
-/* line 74, ../scss/style.scss */
+/* line 75, ../scss/style.scss */
 .logo-text {
   float: left;
   text-decoration: none;
@@ -160,12 +161,12 @@ body {
   font-weight: bold;
 }
 
-/* line 82, ../scss/style.scss */
+/* line 83, ../scss/style.scss */
 .logo {
   float: left;
 }
 
-/* line 86, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 a.link:hover, .logo:hover {
   background-color: #EFEFEF;
 }
@@ -173,7 +174,7 @@ a.link:hover, .logo:hover {
 /* ============================================
    Music Player
    ============================================ */
-/* line 94, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 .controls {
   position: fixed;
   right: 0px;
@@ -183,7 +184,7 @@ a.link:hover, .logo:hover {
   z-index: 3;
 }
 
-/* line 102, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .player {
   background: url("../img/controls-sprite.png") no-repeat;
   -webkit-background-size: 240px 96px;
@@ -192,7 +193,7 @@ a.link:hover, .logo:hover {
   background-position: 0 0;
 }
 
-/* line 110, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .list, .previous, .next, .play, .playing {
   float: left;
   height: 48px;
@@ -200,52 +201,52 @@ a.link:hover, .logo:hover {
   margin: 8px 0px;
 }
 
-/* line 117, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 .previous {
   background-position: 0 0;
 }
-/* line 119, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 .previous:hover {
   background-position: 0 -48px;
 }
 
-/* line 124, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 .play {
   background-position: -192px 0;
 }
-/* line 126, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 .play:hover {
   background-position: -192px -48px;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 132, ../scss/style.scss */
 .next {
   background-position: -96px 0;
 }
-/* line 133, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 .next:hover {
   background-position: -96px -48px;
 }
 
-/* line 138, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .list {
   background-position: -144px 0;
 }
-/* line 140, ../scss/style.scss */
+/* line 141, ../scss/style.scss */
 .list:hover {
   background-position: -144px -48px;
 }
 
-/* line 145, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .playing {
   background-position: -48px 0;
 }
-/* line 147, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 .playing:hover {
   background-position: -48px -48px;
 }
 
-/* line 152, ../scss/style.scss */
+/* line 153, ../scss/style.scss */
 .tracklist {
   display: none;
   position: absolute;
@@ -255,13 +256,13 @@ a.link:hover, .logo:hover {
   border-bottom: 4px solid #FF7729;
   z-index: 2;
 }
-/* line 160, ../scss/style.scss */
+/* line 161, ../scss/style.scss */
 .tracklist .album {
   width: 50px;
   height: 50px;
   float: left;
 }
-/* line 165, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 .tracklist p {
   color: #000000;
   line-height: 50px;
@@ -274,18 +275,18 @@ a.link:hover, .logo:hover {
   border-bottom: #EFEFEF 1px solid;
   background-color: #FFFFFF;
 }
-/* line 176, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 .tracklist p:hover {
   color: #666;
   cursor: pointer;
 }
 
-/* line 182, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .trackselected {
   background-color: red;
 }
 
-/* line 189, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 .footer {
   background-color: white;
   height: 48px;
@@ -299,12 +300,12 @@ a.link:hover, .logo:hover {
 /* ============================================
    Sections
    ============================================ */
-/* line 203, ../scss/style.scss */
+/* line 204, ../scss/style.scss */
 #about, #events, #gallery {
   display: none;
 }
 
-/* line 210, ../scss/style.scss */
+/* line 211, ../scss/style.scss */
 .stage {
   width: 100%;
   height: 100%;
@@ -314,7 +315,7 @@ a.link:hover, .logo:hover {
   z-index: 1;
 }
 
-/* line 219, ../scss/style.scss */
+/* line 220, ../scss/style.scss */
 #home {
   background-color: #EFEFEF;
 }
@@ -322,7 +323,7 @@ a.link:hover, .logo:hover {
 /* ============================================
    About
    ============================================ */
-/* line 227, ../scss/style.scss */
+/* line 228, ../scss/style.scss */
 #about {
   background: url(../img/sample2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -334,7 +335,7 @@ a.link:hover, .logo:hover {
 /* ============================================
    Events
    ============================================ */
-/* line 239, ../scss/style.scss */
+/* line 240, ../scss/style.scss */
 #events {
   background: url(../img/sample3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -346,33 +347,33 @@ a.link:hover, .logo:hover {
 /* ============================================
    Gallery
    ============================================ */
-/* line 251, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 #gallery {
   width: 100%;
   min-height: 100%;
   /* Images */
 }
-/* line 254, ../scss/style.scss */
+/* line 255, ../scss/style.scss */
 #gallery .columns {
   min-height: 33.333%;
 }
-/* line 256, ../scss/style.scss */
+/* line 257, ../scss/style.scss */
 #gallery .columns img {
   width: 100%;
   margin-bottom: 0.333%;
 }
-/* line 260, ../scss/style.scss */
+/* line 261, ../scss/style.scss */
 #gallery .columns .left {
   float: left;
   width: 33%;
   margin-right: 0.333%;
 }
-/* line 265, ../scss/style.scss */
+/* line 266, ../scss/style.scss */
 #gallery .columns .center {
   float: left;
   width: 33.333%;
 }
-/* line 269, ../scss/style.scss */
+/* line 270, ../scss/style.scss */
 #gallery .columns .right {
   float: left;
   width: 33%;
@@ -382,7 +383,7 @@ a.link:hover, .logo:hover {
 /* ============================================
    Misc
    ============================================ */
-/* line 284, ../scss/style.scss */
+/* line 285, ../scss/style.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -392,17 +393,17 @@ a.link:hover, .logo:hover {
   height: 0;
 }
 
-/* line 292, ../scss/style.scss */
+/* line 293, ../scss/style.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 295, ../scss/style.scss */
+/* line 296, ../scss/style.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 298, ../scss/style.scss */
+/* line 299, ../scss/style.scss */
 * html .clearfix {
   height: 1%;
 }

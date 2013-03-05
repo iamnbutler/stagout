@@ -9,6 +9,9 @@ $(document).ready(function(){
 	$('.nav .link').click(function(){
 		var dataLink = $(this).data('link');
 		changeSection(dataLink);
+	});
+
+	$('.nav .inactive').click(function(){
 		return false;
 	});
 
@@ -112,6 +115,6 @@ $(document).ready(function(){
 	   Gallery Scripts
 	   ============================================ */
 
-	   
+
 
 });
