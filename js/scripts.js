@@ -77,6 +77,7 @@ $(document).ready(function(){
 		$(".play").addClass('playing');
 		grabsong(filepath);
     	music.play();
+    	nowplaying()
     });
 
     //play and pause button
