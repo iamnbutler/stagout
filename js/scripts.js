@@ -31,13 +31,15 @@ $(document).ready(function(){
 	var timer;
 	function nowplaying() {
 		var songname = $(".trackplaying").data('songname');
+		var albumart = $(".trackplaying").data("albumart");
 		$(".nowplaying h1").text(songname);
-		if(music.paused == false && $(".list").hasClass("listselect")){
+		$(".albumart").css('background-image', 'url(img/' + albumart + '.jpg)');
+		if(music.paused == false && $(".list").hasClass("listselect")){//if playing and list open
 			clearTimeout(timer);
 			$(".nowplaying").stop().animate({height: "show"}, 400);
-		} else if(music.paused == true && $(".list").hasClass("listselect")){
+		} else if(music.paused == true && $(".list").hasClass("listselect")){//if paused and list open
 			$(".nowplaying").stop().animate({height: "hide"}, 400);
-		} else if(music.paused == true && !$(".list").hasClass("listselect")){
+		} else if(music.paused == true && !$(".list").hasClass("listselect")){//if paused and list closed
 			$(".nowplaying").stop().animate({height: "hide"}, 400);
 		} else {
 			clearTimeout(timer);
@@ -127,10 +129,11 @@ $(document).ready(function(){
 		$(this).toggleClass('listselect');
 		if($('.tracklist').is(":visible")){
 			$('.tracklist').animate({height: "hide"}, 400);
+			$(".nowplaying").stop().animate({height: "hide"}, 400);
 		} else {
 			$('.tracklist').animate({height: "show"}, 400);
+			nowplaying();
 		}
-		nowplaying();
 	});
 });
 
