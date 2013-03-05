@@ -27,11 +27,44 @@ $(document).ready(function(){
 	    music.src= 'music/' + filepath + '.ogg';
 	}
 
+	//toggle now playing section
+	var timer;
+	function nowplaying() {
+		var songname = $(".trackplaying").data('songname');
+		$(".nowplaying h1").text(songname);
+		if(music.paused == false && $(".list").hasClass("listselect")){
+			clearTimeout(timer);
+			$(".nowplaying").stop().animate({height: "show"}, 400);
+		} else if(music.paused == true && $(".list").hasClass("listselect")){
+			$(".nowplaying").stop().animate({height: "hide"}, 400);
+		} else if(music.paused == true && !$(".list").hasClass("listselect")){
+			$(".nowplaying").stop().animate({height: "hide"}, 400);
+		} else {
+			clearTimeout(timer);
+			$(".nowplaying").stop().animate({height: "show"}, 400);
+			timer = setTimeout(function() {
+				$(".nowplaying").stop().animate({height: "hide"}, 400);
+			}, 3000);
+		}
+	}
+
+	//mp3 or ogg compatability
+	function grabsong(filepath) {
+		if (music.canPlayType('audio/mpeg;')) {
+			music.type= 'audio/mpeg';
+			music.src= 'music/' + filepath + '.mp3';
+	    } else {
+			music.type= 'audio/ogg';
+			music.src= 'music/' + filepath + '.ogg';
+	    }
+	}
+
     //auto play
     $(document).ready(function(){
     	music.play();
     	$(".play").addClass('playing');
     	$(".tracklist p").eq(0).addClass('trackplaying');
+    	nowplaying();
     })
 
     //load songs from list
@@ -40,25 +73,21 @@ $(document).ready(function(){
     	$('.tracklist p').not(this).removeClass('trackplaying');
 		$(this).addClass('trackplaying');
 		$(".play").addClass('playing');
-    	if (music.canPlayType('audio/mpeg;')) {
-		    music.type= 'audio/mpeg';
-		    music.src= 'music/' + filepath + '.mp3';
-	    } else {
-		    music.type= 'audio/ogg';
-		    music.src= 'music/' + filepath + '.ogg';
-	    }
+		grabsong(filepath);
     	music.play();
     });
 
     //play and pause button
 	$(".play").click(function(){
-	  if (music.paused == true) {
-	      music.play();
-	      $(".play").addClass('playing');
-	  } else {
-	      music.pause();
-	      $(".play").removeClass('playing');
-	  }
+		if (music.paused == true) {
+	    	music.play();
+	    	$(".play").addClass('playing');
+	    	nowplaying();
+		} else {
+	    	music.pause();
+	    	$(".play").removeClass('playing');
+	    	nowplaying();
+		}
 	});
 
 	//next button
@@ -72,13 +101,8 @@ $(document).ready(function(){
     	$('.tracklist p').not(nextsong).removeClass('trackplaying');
 		$(nextsong).addClass('trackplaying');
 		$(".play").addClass('playing');
-    	if (music.canPlayType('audio/mpeg;')) {
-		    music.type= 'audio/mpeg';
-		    music.src= 'music/' + filepath + '.mp3';
-	    } else {
-		    music.type= 'audio/ogg';
-		    music.src= 'music/' + filepath + '.ogg';
-	    }
+		nowplaying();
+		grabsong(filepath);
     	music.play();
 	});
 
@@ -93,13 +117,8 @@ $(document).ready(function(){
     	$('.tracklist p').not(nextsong).removeClass('trackplaying');
 		$(nextsong).addClass('trackplaying');
 		$(".play").addClass('playing');
-    	if (music.canPlayType('audio/mpeg;')) {
-		    music.type= 'audio/mpeg';
-		    music.src= 'music/' + filepath + '.mp3';
-	    } else {
-		    music.type= 'audio/ogg';
-		    music.src= 'music/' + filepath + '.ogg';
-	    }
+		nowplaying();
+		grabsong(filepath);
     	music.play();
 	});
 
@@ -107,10 +126,11 @@ $(document).ready(function(){
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
 		if($('.tracklist').is(":visible")){
-			$('.tracklist').hide();
+			$('.tracklist').animate({height: "hide"}, 400);
 		} else {
-			$('.tracklist').show();
+			$('.tracklist').animate({height: "show"}, 400);
 		}
+		nowplaying();
 	});
 });
 
