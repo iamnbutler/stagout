@@ -17,9 +17,8 @@ $(document).ready(function(){
 
 	//audio player
 	///////////////////////////
-	var music = new Audio('music/stagdout.mp3');
-
 	var filepath = $(".tracklist p").eq(0).data('url');
+	var music = new Audio();
     if (music.canPlayType('audio/mpeg;')) {
 	    music.type= 'audio/mpeg';
 	    music.src= 'music/' + filepath + '.mp3';
@@ -32,14 +31,14 @@ $(document).ready(function(){
     $(document).ready(function(){
     	music.play();
     	$(".play").addClass('playing');
-    	$(".tracklist p").eq(0).addClass('trackselected');
+    	$(".tracklist p").eq(0).addClass('trackplaying');
     })
 
     //load songs from list
     $(".tracklist p").click(function(){
     	var filepath = $(this).data('url');
-    	$('.tracklist p').not(this).removeClass('trackselected');
-		$(this).addClass('trackselected');
+    	$('.tracklist p').not(this).removeClass('trackplaying');
+		$(this).addClass('trackplaying');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
@@ -64,14 +63,14 @@ $(document).ready(function(){
 
 	//next button
 	$(".next").click(function(){
-		if($('.trackselected').is(":last-child")){
+		if($('.trackplaying').is(":last-child")){
 			var nextsong = $(".tracklist p").eq(0);
 		} else {
-			var nextsong = $(".trackselected").next();
+			var nextsong = $(".trackplaying").next();
 		}
     	var filepath = nextsong.data('url');
-    	$('.tracklist p').not(nextsong).removeClass('trackselected');
-		$(nextsong).addClass('trackselected');
+    	$('.tracklist p').not(nextsong).removeClass('trackplaying');
+		$(nextsong).addClass('trackplaying');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
@@ -85,14 +84,14 @@ $(document).ready(function(){
 
 	//previous button
 	$(".previous").click(function(){
-		if($('.trackselected').is(":first-child")){
+		if($('.trackplaying').is(":first-child")){
 			var nextsong = $(".tracklist p").last();
 		} else {
-			var nextsong = $(".trackselected").prev();
+			var nextsong = $(".trackplaying").prev();
 		}
     	var filepath = nextsong.data('url');
-    	$('.tracklist p').not(nextsong).removeClass('trackselected');
-		$(nextsong).addClass('trackselected');
+    	$('.tracklist p').not(nextsong).removeClass('trackplaying');
+		$(nextsong).addClass('trackplaying');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
@@ -107,19 +106,12 @@ $(document).ready(function(){
 	//list toggle
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
-		$('.tracklist').toggle(400);
+		if($('.tracklist').is(":visible")){
+			$('.tracklist').hide();
+		} else {
+			$('.tracklist').show();
+		}
 	});
-
-<<<<<<< HEAD
-
-	/* ============================================
-	   Gallery Scripts
-	   ============================================ */
-
-
-
-});
-=======
 });
 
 
@@ -132,12 +124,3 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
->>>>>>> PLAYER WORKING, WITH LOTS AND LOTS OF GOATS
