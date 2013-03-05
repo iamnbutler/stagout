@@ -17,8 +17,9 @@ $(document).ready(function(){
 
 	//audio player
 	///////////////////////////
+	var music = new Audio('music/stagdout.mp3');
+
 	var filepath = $(".tracklist p").eq(0).data('url');
-	var music = new Audio(filepath);
     if (music.canPlayType('audio/mpeg;')) {
 	    music.type= 'audio/mpeg';
 	    music.src= 'music/' + filepath + '.mp3';
@@ -69,9 +70,8 @@ $(document).ready(function(){
 			var nextsong = $(".trackselected").next();
 		}
     	var filepath = nextsong.data('url');
-    	console.log(filepath);
-    	//$('.tracklist p').not(nextsong).removeClass('trackselected');
-		//$(nextsong).addClass('trackselected');
+    	$('.tracklist p').not(nextsong).removeClass('trackselected');
+		$(nextsong).addClass('trackselected');
 		$(".play").addClass('playing');
     	if (music.canPlayType('audio/mpeg;')) {
 		    music.type= 'audio/mpeg';
@@ -107,9 +107,10 @@ $(document).ready(function(){
 	//list toggle
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
-		$('.tracklist').show();
+		$('.tracklist').toggle(400);
 	});
 
+<<<<<<< HEAD
 
 	/* ============================================
 	   Gallery Scripts
@@ -118,3 +119,25 @@ $(document).ready(function(){
 
 
 });
+=======
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> PLAYER WORKING, WITH LOTS AND LOTS OF GOATS
