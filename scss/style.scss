@@ -107,60 +107,82 @@ a.link:hover, .logo:hover{
 	background-size: 240px 96px;
 	background-position: 0 0;
 }
-
 .list, .previous, .next, .play, .playing{
 	float: left;
 	height: 48px;
 	width: 48px;
 	margin: 8px 0px;
 }
-
 .previous{
 	background-position: 0 0;
 	&:hover{
 		background-position: 0 -48px;
 	}
 }
-
 .play{
 	background-position: -192px 0;
 	&:hover{
 		background-position: -192px -48px;
 	}
 }
-
 .next{
 	background-position: -96px 0;
 	&:hover{
 		background-position: -96px -48px;
 	}
 }
-
 .list{
 	background-position: -144px 0;
 	&:hover{
 		background-position: -144px -48px;
 	}
 }
-
 .playing {
 	background-position: -48px 0;
 	&:hover{
 		background-position: -48px -48px;
 	}
 }
-
-.tracklist{
-	display: none;
+.dropdown{
 	position: absolute;
 	top: 64px;
-	right: 0px;
-	width: 192px;
+	width: 256px;
+}
+.nowplaying{
+	float: left;
+	background-color: #FFFFFF;
+	border-bottom: #EFEFEF 1px solid;
+	width: 256px;
+	height: 64px; 
+	z-index: 2;
+	h1{
+		line-height: 36px;
+		font-size: 1em;
+		color: #000000;
+	}
+	h2{
+		padding-left: 16px;
+		float: left;
+		line-height: 24px;
+		font-size: 0.75em;
+		color: #FF7729;
+	}
+}
+.albumart{
+	float: left;
+	height: 64px;
+	width: 64px;
+	background-color: #FF7729;
+}
+.tracklist{
+	display: none;
+	float: left;
+	width: 256px;
 	border-bottom: 4px solid #FF7729;
 	z-index: 2;
 	p{
 		color: #000000;
-		line-height: 50px;
+		line-height: 32px;
 		text-indent: 20px;
 		text-align: left;
 		font-size: 16px;
@@ -176,7 +198,7 @@ a.link:hover, .logo:hover{
 	}
 }
 .trackplaying{//not working for some reason
-	border-left: 4px solid #FF7729;
+	border-left: 8px solid #FF7729;
 }
 
 .footer {
