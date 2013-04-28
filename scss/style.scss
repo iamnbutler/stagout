@@ -1,26 +1,26 @@
-/* ============================================
-   Reset
-   ============================================ */
+//variables
+$maincolor: #FF7729;
+$bgcolor: #EFEFEF;
 
-@import "_reset.scss";
+//resets
+html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, b,u,i,center, dl,dt,dd,ol,ul,li, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td, article,aside,canvas,details,embed,figcaption,figure, footer,header,hgroup,menu,nav,output,ruby,section,summary, time,mark,audio,video{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;} article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;} body{line-height: 1;} ol,ul{list-style: none;} blockquote,q{quotes: none;} blockquote:before,blockquote:after,q:before,q:after{content: ""; content: none;} table{border-collapse: collapse; border-spacing: 0;} 
 
-/* ============================================
-   Typography
-   ============================================ */
+a{color: #000;}
+a:visited{color: #000;}
+a:hover{color: #000;}
+a:focus{outline: thin dotted;}
+a:hover, a:active{outline: 0;}
 
-@import "_typography.scss";
+::-moz-selection{background: $maincolor; color: #fff; text-shadow: none;}
+::selection{background: $maincolor; color: #fff; text-shadow: none;}
 
-/* ============================================
-   Styles
-   ============================================ */
-
+//main styles:
 html, body {
-	overflow-x: hidden;
-	overflow-y: scroll;
 }
 
 html {
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -28,8 +28,8 @@ body {
 	width: 100%;
 	height: 100%;
 	font-size: 100%;
-	overflow: hidden;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 }
 
 .section {
@@ -43,11 +43,25 @@ body {
 
 .nav {
 	width: 100%;
+	height: 64px;
 	height: 4em;
 	background-color: #FFFFFF;
 	position: fixed;
-	border-bottom: 4px solid #FF7729;
+	border-bottom: 4px solid $maincolor;
 	z-index: 2;
+	color: #000000;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.navonpageload{
+	-webkit-transform: translateY(-4em);
+	-moz-transform: translateY(-4em);
+	-o-transform: translateY(-4em);
+	-ms-transform: translateY(-4em);
+	transform: translateY(-4em);
 }
 
 .icon {
@@ -70,6 +84,10 @@ body {
 	-moz-transition: 0.4s;
 	-o-transition: 0.4s;
 	transition: 0.4s;
+}
+
+.nav .activepage{
+	color: $maincolor;
 }
 
 .logo-text {
@@ -160,19 +178,27 @@ a.link:hover, .logo:hover{
 	height: 64px; 
 	z-index: 2;
 	h1{
+		margin-top: 8px;
 		line-height: 24px;
-		font-size: 16px;
-		font-size: 1em;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125em;
+		font-size: 1.125rem;
+		text-indent: 12px;
+		text-indent: 0.75em;
+		text-indent: 0.75rem;
 		color: #000000;
+		font-weight: 400;
 		text-overflow: ellipsis;
+		text-transform: capitalize;
 	}
 	h2{
-		margin-top: 8px;
 		line-height: 18px;
 		font-size: 12px;
 		font-size: 0.75em;
 		font-size: 0.75rem;
+		text-indent: 12px;
+		text-indent: 0.75em;
+		text-indent: 0.75rem;
 		color: #FF7729;
 	}
 }
@@ -182,7 +208,6 @@ a.link:hover, .logo:hover{
 	width: 64px;
 	background-size: 64px;
 	background-color: #FF7729;
-	margin-right: 8px;
 }
 .tracklist{
 	display: none;
@@ -190,25 +215,28 @@ a.link:hover, .logo:hover{
 	width: 256px;
 	border-bottom: 4px solid #FF7729;
 	z-index: 2;
-	p{
-		color: #000000;
-		line-height: 32px;
-		text-indent: 20px;
-		text-align: left;
-		font-size: 16px;
-		font-size: 1em;
-		font-size: 1rem;
-		z-index: 3;
-		border-bottom: #EFEFEF 1px solid;
-		background-color: #FFFFFF;
-		&:hover{
-			color: #666;
-			cursor: pointer;
-		}
+}
+.tracktext{
+	color: #000000;
+	line-height: 32px;
+	text-indent: 24px;
+	text-align: left;
+	font-size: 14px;
+	font-size: 0.875em;
+	font-size: 0.875rem;
+	font-weight: 300;
+	z-index: 3;
+	border-bottom: #EFEFEF 1px solid;
+	background-color: #FFFFFF;
+	&:hover{
+		color: #666;
+		cursor: pointer;
 	}
 }
-.trackplaying{//not working for some reason
+
+.trackplaying{
 	border-left: 8px solid #FF7729;
+	text-indent: 16px;
 }
 
 .footer {
@@ -233,13 +261,12 @@ a.link:hover, .logo:hover{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top: 0;
 	left: 0;
 	z-index: 1;
 }
 
 #home {
-	background-color: #EFEFEF;
+	background-color: $bgcolor;
 }
 
 	/* ============================================
@@ -247,11 +274,130 @@ a.link:hover, .logo:hover{
 	   ============================================ */
 
 	#about {
-		background: url(../img/sample2.jpg) no-repeat center center fixed; 
+		background: url("../img/citybg.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		color: #FFFFFF;
+		width: 100%;
+		line-height: 1.5;
+		>img{
+			display: block;
+			width: 96%;
+			padding: 15% 2% 0px 2%;
+			max-width: 900px;
+			margin: 0 auto;
+			//padding: 15% 4rem 0px 4rem;
+		}
+		>p{
+			max-width: 900px;
+			margin: auto;
+			padding: 64px;
+			padding: 4rem;
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 2%;
+			-moz-column-gap: 2%;
+			column-gap: 2%;
+		}
+		h3 {
+			font-size: 24px;
+			font-size: 1.5em;
+			font-size: 1.5rem;
+		    overflow: hidden;
+		    text-align: center;
+		    max-width: 900px;
+		    margin: auto;
+		    padding-top: 8px;
+		    padding-top: 0.5rem;
+		}
+		//for vertical lines beside h3
+		.lines span{
+			position: relative;
+		}
+		.lines span:before,
+		.lines span:after{
+			content: ""; 
+			position: absolute;
+			top: 50%; 
+			margin-top: -4px;
+			margin-top: -0.25rem;
+			height: 4px;
+			height: 0.25rem;
+			border-top: 1px solid #FFFFFF;
+			border-top: 0.0625rem solid #FFFFFF;
+			border-bottom: 3px solid #FFFFFF;
+			border-bottom: 0.1875rem solid #FFFFFF;
+			width: 200em;
+			max-width: 900px;
+		}
+
+		.lines span:before {  
+			right: 100%;
+			margin-right: 8px;
+			margin-right: 0.5rem;
+		}
+
+		.lines span:after {  
+			left: 100%;
+			margin-left: 8px;
+			margin-left: 0.5rem;
+		}
+
+		h1{
+			color: $maincolor;
+			font-size: 32px;
+			font-size: 2em;
+			font-size: 2rem;
+			font-weight: 700;
+		}
+		h2{
+			color: $maincolor;
+			font-size: 14px;
+			font-size: 0.875em;
+			font-size: 0.875rem;
+			font-weight: 400;
+			font-style: italic;
+		}
+		p{
+			color: #FFFFFF;
+			font-size: 14px;
+			font-size: 0.875em;
+			font-size: 0.875rem;
+			font-weight: 400;
+		}
+		a{
+			color: $maincolor;
+			text-decoration: none;
+		}
+	}
+	.harrybio, .jakebio{
+		height: 66%;
+		position: absolute;
+		bottom: 0px;
+	}
+	.harrybio{
+		left: 0px;
+	}
+	.jakebio{
+		right: 0px;
+	}
+	.harrybiotext, .harryillustration{
+		float: left;
+	}
+	.jakebiotext, .jakeillustration{
+		float: right;
+	}
+	.harrybiotext, .jakebiotext{
+		padding: 0px 16px;
+		padding: 0px 1em;
+		padding: 0px 1rem;
+		width: 20em;
+	}
+	.harryillustration, .jakeillustration{
+		height: 100%;
 	}
 
 	/* ============================================
@@ -259,11 +405,6 @@ a.link:hover, .logo:hover{
 	   ============================================ */
 	
 	#events {
-		background: url(../img/sample3.jpg) no-repeat center center fixed; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
 	}
 
 	/* ============================================
@@ -273,11 +414,15 @@ a.link:hover, .logo:hover{
 	#gallery {
 		width: 100%;
 		min-height: 100%;
+		background-color: $bgcolor;
+		margin-top: 64px;
+		margin-top: 4em;
 		.columns {
 			min-height: 33.333%;
 			img {
 				width: 100%;
 				margin-bottom: 0.333%;
+				margin-bottom: 0.333vw;
 			}
 			.left {
 				float: left;
@@ -294,9 +439,6 @@ a.link:hover, .logo:hover{
 				margin-left: 0.333%;
 			}
 		}
-
-		/* Images */
-
 	}
 
 /* ============================================

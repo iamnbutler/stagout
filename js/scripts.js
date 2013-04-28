@@ -1,14 +1,21 @@
 // Load scripts after page loads
 $(document).ready(function(){
+	//On page load things
+	$("nav").removeClass("navonpageload");
+	//skip to here after $("#about").delay(400).fadeIn(800);
 
+	//nav links to change pages
 	function changeSection(dataLink) {
 		$('.section').stop().fadeOut(400);
 		$('#' + dataLink).delay(300).fadeIn(800);
 	}
 
-	$('.nav .link').click(function(){
+	$('.link').click(function(){
 		var dataLink = $(this).data('link');
 		changeSection(dataLink);
+		//nav indicator for current page
+		$(this).addClass('activepage');
+		$('.link').not(this).removeClass('activepage');
 	});
 
 	$('.nav .inactive').click(function(){
@@ -61,12 +68,14 @@ $(document).ready(function(){
 	    }
 	}
 
-    //auto play
+    //auto play after page loads
     $(document).ready(function(){
-    	music.play();
-    	$(".play").addClass('playing');
-    	$(".tracklist p").eq(0).addClass('trackplaying');
-    	nowplaying();
+    	setTimeout(function(){
+	    	music.play();
+	    	$(".play").addClass('playing');
+	    	$(".tracklist p").eq(0).toggleClass('trackplaying');
+	    	nowplaying();
+    	},600);
     })
 
     //load songs from list
