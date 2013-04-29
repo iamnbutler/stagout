@@ -3,19 +3,25 @@ $(document).ready(function(){
 	//On page load things
 	$("nav").removeClass("navonpageload");
 	//skip to here after $("#about").delay(400).fadeIn(800);
+	
 
 	//nav links to change pages
-	function changeSection(dataLink) {
+	function changeSection(datalink) {
 		$('.section').stop().fadeOut(400);
-		$('#' + dataLink).delay(300).fadeIn(800);
+		$('#' + datalink).delay(300).fadeIn(800);
 	}
 
-	$('.link').click(function(){
-		var dataLink = $(this).data('link');
-		changeSection(dataLink);
+	$('.nav .link').click(function(){
+		var datalink = $(this).data('link');
+		changeSection(datalink);
 		//nav indicator for current page
 		$(this).addClass('activepage');
 		$('.link').not(this).removeClass('activepage');
+		if (datalink = about){ 
+			setTimeout(function(){
+				$("#about p").removeClass("openingtransition");
+			}, 800);
+		}
 	});
 
 	$('.nav .inactive').click(function(){

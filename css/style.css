@@ -52,13 +52,11 @@ a:hover, a:active {
   text-shadow: none; }
 
 html {
-  height: 100%;
   overflow-x: hidden; }
 
 body {
   background-color: #EFEFEF;
   width: 100%;
-  height: 100%;
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
@@ -66,6 +64,9 @@ body {
 .section {
   width: 100%;
   min-height: 100%; }
+  .section a {
+    color: #ff7729;
+    text-decoration: none; }
 
 /* ============================================
    Nav
@@ -249,15 +250,6 @@ a.link:hover, .logo:hover {
   border-left: 8px solid #ff7729;
   text-indent: 16px; }
 
-.footer {
-  background-color: white;
-  height: 48px;
-  width: 100%;
-  border-top: 1px #e0e0e0 solid;
-  position: fixed;
-  bottom: 0;
-  left: 0; }
-
 /* ============================================
    Sections
    ============================================ */
@@ -285,25 +277,40 @@ a.link:hover, .logo:hover {
   background-size: cover;
   color: #FFFFFF;
   width: 100%;
+  height: 100%;
   line-height: 1.5; }
-  #about > img {
+
+.aboutlandingwrapper {
+  min-height: 100%;
+  width: 100%; }
+  .aboutlandingwrapper img {
     display: block;
     width: 96%;
     padding: 15% 2% 0px 2%;
     max-width: 900px;
     margin: 0 auto; }
-  #about > p {
+  .aboutlandingwrapper p {
     max-width: 900px;
     margin: auto;
     padding: 64px;
     padding: 4rem;
+    font-size: 14px;
+    font-size: 0.875em;
+    font-size: 0.875rem;
+    font-weight: 400;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 2%;
     -moz-column-gap: 2%;
-    column-gap: 2%; }
-  #about h3 {
+    column-gap: 2%;
+    opacity: 1;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -ms-transition: 0.8s;
+    transition: 0.8s; }
+  .aboutlandingwrapper h3 {
     font-size: 24px;
     font-size: 1.5em;
     font-size: 1.5rem;
@@ -313,13 +320,19 @@ a.link:hover, .logo:hover {
     margin: auto;
     padding-top: 8px;
     padding-top: 0.5rem; }
-  #about .lines span {
+  .aboutlandingwrapper .openingtransition {
+    opacity: 0;
+    -webkit-transform: translateY(128px);
+    -moz-transform: translateY(128px);
+    -o-transform: translateY(128px);
+    -ms-transform: translateY(128px);
+    transform: translateY(128px); }
+  .aboutlandingwrapper .lines span {
     position: relative; }
-  #about .lines span:before,
-  #about .lines span:after {
+  .aboutlandingwrapper .lines span:before, .aboutlandingwrapper .lines span:after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 55%;
     margin-top: -4px;
     margin-top: -0.25rem;
     height: 4px;
@@ -330,47 +343,37 @@ a.link:hover, .logo:hover {
     border-bottom: 0.1875rem solid white;
     width: 200em;
     max-width: 900px; }
-  #about .lines span:before {
+  .aboutlandingwrapper .lines span:before {
     right: 100%;
     margin-right: 8px;
     margin-right: 0.5rem; }
-  #about .lines span:after {
+  .aboutlandingwrapper .lines span:after {
     left: 100%;
     margin-left: 8px;
     margin-left: 0.5rem; }
-  #about h1 {
+
+.harrybio, .jakebio {
+  height: 66%;
+  margin: 0 auto; }
+  .harrybio h1, .jakebio h1 {
     color: #ff7729;
     font-size: 32px;
     font-size: 2em;
     font-size: 2rem;
     font-weight: 700; }
-  #about h2 {
+  .harrybio h2, .jakebio h2 {
     color: #ff7729;
     font-size: 14px;
     font-size: 0.875em;
     font-size: 0.875rem;
     font-weight: 400;
     font-style: italic; }
-  #about p {
+  .harrybio p, .jakebio p {
     color: #FFFFFF;
     font-size: 14px;
     font-size: 0.875em;
     font-size: 0.875rem;
     font-weight: 400; }
-  #about a {
-    color: #ff7729;
-    text-decoration: none; }
-
-.harrybio, .jakebio {
-  height: 66%;
-  position: absolute;
-  bottom: 0px; }
-
-.harrybio {
-  left: 0px; }
-
-.jakebio {
-  right: 0px; }
 
 .harrybiotext, .harryillustration {
   float: left; }

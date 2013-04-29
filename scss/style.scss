@@ -19,14 +19,12 @@ html, body {
 }
 
 html {
-	height: 100%;
 	overflow-x: hidden;
 }
 
 body {
 	background-color: #EFEFEF;
 	width: 100%;
-	height: 100%;
 	font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -35,6 +33,10 @@ body {
 .section {
 	width: 100%;
 	min-height: 100%;
+	a{
+		color: $maincolor;
+		text-decoration: none;
+	}
 }
 
 /* ============================================
@@ -239,16 +241,6 @@ a.link:hover, .logo:hover{
 	text-indent: 16px;
 }
 
-.footer {
-	background-color: white;
-	height: 48px;
-	width: 100%;
-	border-top: 1px #E0E0E0 solid;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-}
-
 /* ============================================
    Sections
    ============================================ */
@@ -281,26 +273,40 @@ a.link:hover, .logo:hover{
 		background-size: cover;
 		color: #FFFFFF;
 		width: 100%;
+		height: 100%;
 		line-height: 1.5;
-		>img{
+	}
+	.aboutlandingwrapper{
+		min-height: 100%;
+		width: 100%;
+		img{
 			display: block;
 			width: 96%;
 			padding: 15% 2% 0px 2%;
 			max-width: 900px;
 			margin: 0 auto;
-			//padding: 15% 4rem 0px 4rem;
 		}
-		>p{
+		p{
 			max-width: 900px;
 			margin: auto;
 			padding: 64px;
 			padding: 4rem;
+			font-size: 14px;
+			font-size: 0.875em;
+			font-size: 0.875rem;
+			font-weight: 400;
 			-webkit-column-count: 2;
 			-moz-column-count: 2;
 			column-count: 2;
 			-webkit-column-gap: 2%;
 			-moz-column-gap: 2%;
 			column-gap: 2%;
+			opacity: 1;
+			-webkit-transition: 0.8s;
+			-moz-transition: 0.8s;
+			-o-transition: 0.8s;
+			-ms-transition: 0.8s;
+			transition: 0.8s;
 		}
 		h3 {
 			font-size: 24px;
@@ -313,15 +319,22 @@ a.link:hover, .logo:hover{
 		    padding-top: 8px;
 		    padding-top: 0.5rem;
 		}
+		.openingtransition{
+			opacity: 0;
+			-webkit-transform: translateY(128px);
+			-moz-transform: translateY(128px);
+			-o-transform: translateY(128px);
+			-ms-transform: translateY(128px);
+			transform: translateY(128px);
+		}
 		//for vertical lines beside h3
 		.lines span{
 			position: relative;
 		}
-		.lines span:before,
-		.lines span:after{
+		.lines span:before, .lines span:after{
 			content: ""; 
 			position: absolute;
-			top: 50%; 
+			top: 55%; 
 			margin-top: -4px;
 			margin-top: -0.25rem;
 			height: 4px;
@@ -333,7 +346,6 @@ a.link:hover, .logo:hover{
 			width: 200em;
 			max-width: 900px;
 		}
-
 		.lines span:before {  
 			right: 100%;
 			margin-right: 8px;
@@ -345,7 +357,10 @@ a.link:hover, .logo:hover{
 			margin-left: 8px;
 			margin-left: 0.5rem;
 		}
-
+	}
+	.harrybio, .jakebio{
+		height: 66%;
+		margin: 0 auto;
 		h1{
 			color: $maincolor;
 			font-size: 32px;
@@ -368,21 +383,6 @@ a.link:hover, .logo:hover{
 			font-size: 0.875rem;
 			font-weight: 400;
 		}
-		a{
-			color: $maincolor;
-			text-decoration: none;
-		}
-	}
-	.harrybio, .jakebio{
-		height: 66%;
-		position: absolute;
-		bottom: 0px;
-	}
-	.harrybio{
-		left: 0px;
-	}
-	.jakebio{
-		right: 0px;
 	}
 	.harrybiotext, .harryillustration{
 		float: left;
