@@ -51,17 +51,19 @@ a:hover, a:active {
   color: #fff;
   text-shadow: none; }
 
-html {
+html, body {
+  height: 100%;
+  width: 100%;
   overflow-x: hidden; }
 
 body {
   background-color: #EFEFEF;
-  width: 100%;
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
 
 .section {
+  height: 100%;
   width: 100%;
   min-height: 100%; }
   .section a {
@@ -136,7 +138,9 @@ a.link:hover, .logo:hover {
   right: 0px;
   top: 0px;
   height: 48px;
+  height: 3rem;
   margin-right: 32px;
+  margin-right: 2rem;
   z-index: 3; }
 
 .player {
@@ -277,12 +281,12 @@ a.link:hover, .logo:hover {
   background-size: cover;
   color: #FFFFFF;
   width: 100%;
-  height: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .aboutlandingwrapper {
-  min-height: 100%;
-  width: 100%; }
+  min-height: 100%; }
   .aboutlandingwrapper img {
     display: block;
     width: 96%;
@@ -353,8 +357,9 @@ a.link:hover, .logo:hover {
     margin-left: 0.5rem; }
 
 .harrybio, .jakebio {
-  height: 66%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px; }
   .harrybio h1, .jakebio h1 {
     color: #ff7729;
     font-size: 32px;
@@ -375,20 +380,27 @@ a.link:hover, .logo:hover {
     font-size: 0.875rem;
     font-weight: 400; }
 
-.harrybiotext, .harryillustration {
+.harryillustration, .harrybiotext {
   float: left; }
 
-.jakebiotext, .jakeillustration {
+.jakeillustration, .jakebiotext {
   float: right; }
 
 .harrybiotext, .jakebiotext {
-  padding: 0px 16px;
-  padding: 0px 1em;
-  padding: 0px 1rem;
-  width: 20em; }
+  width: 20em;
+  background-color: #333333;
+  padding: 16px 3200px;
+  padding: 1rem 200rem;
+  margin: 0px 3184px;
+  margin: 0px -199rem;
+  z-index: 1; }
 
 .harryillustration, .jakeillustration {
-  height: 100%; }
+  margin-top: 16px;
+  margin-top: 1rem;
+  width: 33%;
+  z-index: 3;
+  position: relative; }
 
 /* ============================================
    Events
