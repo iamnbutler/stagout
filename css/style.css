@@ -387,7 +387,8 @@ a.link:hover, .logo:hover {
   float: right; }
 
 .harrybiotext, .jakebiotext {
-  width: 20em;
+  border-top: 4px solid #ff7729;
+  max-width: 20em;
   background-color: #333333;
   padding: 16px 3200px;
   padding: 1rem 200rem;
@@ -395,10 +396,14 @@ a.link:hover, .logo:hover {
   margin: 0px -199rem;
   z-index: 1; }
 
+.jakebiotext {
+  margin-bottom: 64px;
+  margin-bottom: 4rem; }
+
 .harryillustration, .jakeillustration {
   margin-top: 16px;
   margin-top: 1rem;
-  width: 33%;
+  width: 35%;
   z-index: 3;
   position: relative; }
 
