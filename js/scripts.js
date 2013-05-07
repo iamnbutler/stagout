@@ -2,8 +2,21 @@
 $(document).ready(function(){
 	//On page load things
 	$("nav").removeClass("navonpageload");
-	//skip to here after $("#about").delay(400).fadeIn(800);
-	
+	$("#about").fadeIn(800, function(){
+		setTimeout(function(){
+			$("#about h3").removeClass("openingtransitionsubtitle");
+			$("#about img").removeClass("openingtransitiontitle");
+		}, 400);
+		setTimeout(function(){
+			$("#about p").removeClass("openingtransitionparagraph");
+		}, 1200);
+		setTimeout(function(){
+	    	music.play();
+	    	$(".play").addClass('playing');
+	    	$(".tracklist p").eq(0).toggleClass('trackplaying');
+	    	nowplaying();
+    	}, 800);
+	});
 
 	//nav links to change pages
 	function changeSection(datalink) {
@@ -17,19 +30,40 @@ $(document).ready(function(){
 		//nav indicator for current page
 		$(this).addClass('activepage');
 		$('.link').not(this).removeClass('activepage');
-		if (datalink = about){ 
+		if (datalink == "events"){
 			setTimeout(function(){
-				$("#about p").removeClass("openingtransition");
+				$("#events h1").removeClass("openingtransitiontitle");
 			}, 800);
+			setTimeout(function(){
+				$("#events hr").eq(0).removeClass("openingtransitionparagraph");
+			}, 1200);
+			setTimeout(function(){
+				$("#events p").removeClass("openingtransitionparagraph");
+			}, 1600);
+			setTimeout(function(){
+				$("#events hr").eq(1).removeClass("openingtransitionparagraph");
+			}, 2000);
+		} else if (datalink == "gallery"){
+			setTimeout(function(){
+				$("#gallery li").eq(0).removeClass("openingtransitionparagraph");
+			}, 400);
+			setTimeout(function(){
+				$("#gallery li").eq(1).removeClass("openingtransitionparagraph");
+			}, 800);
+			setTimeout(function(){
+				$("#gallery li").eq(2).removeClass("openingtransitionparagraph");
+			}, 1200);
 		}
 	});
 
+	//remove back/forward function for internal pages
 	$('.nav .inactive').click(function(){
 		return false;
 	});
 
-	//audio player
-	///////////////////////////
+///////////////////////////
+//audio player
+///////////////////////////
 	var filepath = $(".tracklist p").eq(0).data('url');
 	var music = new Audio();
     if (music.canPlayType('audio/mpeg;')) {
@@ -73,16 +107,6 @@ $(document).ready(function(){
 			music.src= 'music/' + filepath + '.ogg';
 	    }
 	}
-
-    //auto play after page loads
-    $(document).ready(function(){
-    	setTimeout(function(){
-	    	music.play();
-	    	$(".play").addClass('playing');
-	    	$(".tracklist p").eq(0).toggleClass('trackplaying');
-	    	nowplaying();
-    	},600);
-    })
 
     //load songs from list
     $(".tracklist p").click(function(){
