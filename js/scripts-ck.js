@@ -1,2 +1,0 @@
-// Load scripts after page loads
-$(document).ready(function(){function e(e){$(".section").fadeOut(800);$("#"+e).fadeIn(800)}$("#hobos").click(function(){alert("hobos");var t=$(this).data("link");e(t);return!1})});
