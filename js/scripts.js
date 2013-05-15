@@ -23,22 +23,33 @@ $(document).ready(function(){
 		} else{
 			var datalink = $(this).data('link');
 			changeSection(datalink);
-			//nav indicator for current page
-			$(this).addClass('activepage');
+			$(this).addClass('activepage');//nav indicator for current page
 			$('.link').not(this).removeClass('activepage');
 			if (datalink == "events"){
 				setTimeout(function(){
-					$("#events h1").removeClass("openingtransitiontitle");
+					$("#events h1").eq(0).removeClass("openingtransitiontitle");
 				}, 800);
 				setTimeout(function(){
 					$("#events hr").eq(0).removeClass("openingtransitionparagraph");
+				}, 1000);
+				setTimeout(function(){
+					$("#events ul").eq(0).removeClass("openingtransitionparagraph");
 				}, 1200);
 				setTimeout(function(){
-					$("#events p").removeClass("openingtransitionparagraph");
+					$("#events hr").eq(1).removeClass("openingtransitionparagraph");
+				}, 1400);
+				setTimeout(function(){
+					$("#events h1").eq(1).removeClass("openingtransitiontitle");
 				}, 1600);
 				setTimeout(function(){
-					$("#events hr").eq(1).removeClass("openingtransitionparagraph");
+					$("#events hr").eq(2).removeClass("openingtransitionparagraph");
+				}, 1800);
+				setTimeout(function(){
+					$("#events ul").eq(1).removeClass("openingtransitionparagraph");
 				}, 2000);
+				setTimeout(function(){
+					$("#events hr").eq(3).removeClass("openingtransitionparagraph");
+				}, 2200);
 			} else if (datalink == "gallery"){
 				setTimeout(function(){
 					$("#gallery li").eq(0).removeClass("openingtransitionparagraph");
@@ -74,6 +85,12 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+///////////////////////////
+// Gallery Title on Hover
+///////////////////////////
+
+
 
 ///////////////////////////
 // audio player
@@ -133,7 +150,7 @@ if($(".controls").is(':visible')){
 			music.src= 'music/' + filepath + '.ogg';
 	    }
 	}
-	
+
 	//list toggle
 	$('.list').click(function(){
 		$(this).toggleClass('listselect');
