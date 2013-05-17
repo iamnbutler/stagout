@@ -10,6 +10,9 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$("#about p").removeClass("openingtransitionparagraph");
 		}, 1600);
+		setTimeout(function(){
+			$(".scrolldownbutton").removeClass("openingtransitionparagraph");
+		}, 2000);
 	});
 
 	//nav links to change pages
@@ -64,19 +67,19 @@ $(document).ready(function(){
 		}
 	});
 
-	//scrolling on page to image for desktop and text for mobile
-	$('.aboutlandingwrapper a').eq(0).click(function(){ 
+	//internal page scrolling on click of the link to image for desktop and text for mobile
+	$('.aboutlandingwrapper a:eq(0), .scrolldownbutton').click(function(){ 
 		if (( $(window).width() > 500)){
-			$('#about').scrollTo( '#harry', 800, {offset:-64} );
+			$('#about').scrollTo( '#harry', 800, {offset:-64, easing:'easeOutBack'} );
 		} else{
-			$('#about').scrollTo( '#harrymobile', 800, {offset:-64} );
+			$('#about').scrollTo( '#harrymobile', 800, {offset:-64, easing:'easeOutBack'} );
 		}
 	});
 	$('.aboutlandingwrapper a').eq(1).click(function(){ 
 		if (( $(window).width() > 500)){
-			$('#about').scrollTo( '#jake', 800, {offset:-64} );
+			$('#about').scrollTo( '#jake', 800, {offset:-64, easing:'easeOutBack'} );
 		} else{
-			$('#about').scrollTo( '#jakemobile', 800, {offset:-64} );
+			$('#about').scrollTo( '#jakemobile', 800, {offset:-64, easing:'easeOutBack'} );
 		}
 	});
 
@@ -85,12 +88,6 @@ $(document).ready(function(){
 		return false;
 	});
 });
-
-///////////////////////////
-// Gallery Title on Hover
-///////////////////////////
-
-
 
 ///////////////////////////
 // audio player
@@ -276,8 +273,6 @@ if($(".controls").is(':visible')){
 		}
 	});
 });
-
-
 
 
 
