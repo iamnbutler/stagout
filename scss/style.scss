@@ -481,7 +481,9 @@ section {
 			font-size: 0.875rem;
 			font-weight: 400;
 			font-style: italic;
-			line-height: 2;
+			line-height: 1.5;
+			margin-bottom: 8px;
+			margin-bottom: 0.5rem;
 		}
 		p{
 			color: #FFFFFF;
@@ -499,14 +501,16 @@ section {
 	}
 	.harrybiotext, .jakebiotext{
 		border-top: 4px solid $maincolor;
-		max-width: 352px;
-		max-width: 22em;
-		max-width: 22rem;
+		max-width: 384px;
+		max-width: 24em;
+		max-width: 24rem;
 		background-color: #333333;
-		padding: 16px 3200px;
-		padding: 1rem 200rem;
-		margin: 0px 3184px;
-		margin: 0px -199rem;
+		padding: 1rem 800px;
+		padding: 1rem 56rem;
+		padding: 1rem 50vw;
+		margin: 0px -784px;
+		margin: 0px -55rem;
+		margin: 0px -49vw;
 		z-index: 1;
 	}
 	.harryillustration, .jakeillustration{
@@ -535,6 +539,189 @@ section {
 		z-index: 5;
 		a{
 			color: #444444
+		}
+	}
+
+	/* ============================================
+	   Contact
+	   ============================================ */
+	.contactformwrapper{
+		width: 100%;
+		float: left;
+	}
+	#contact-form {
+		background-color:#333333;
+		max-width: 600px;
+		margin: 0px auto 32px auto;
+		margin: 0px auto 2rem auto;
+		padding-bottom: 16px;
+		padding-bottom: 1rem;
+		border-top: 4px solid $maincolor;
+		color: #FFFFFF;
+		font-weight: 400;
+		h1{
+			color: $maincolor;
+			font-size: 32px;
+			font-size: 2em;
+			font-size: 2rem;
+			font-weight: 700;
+			margin: 16px 4%;
+			margin: 0.5rem 4%;
+		}
+	}
+	#contact-form label{
+		font-size: 14px;
+		font-size: 0.875rem;
+		margin-left: 4%;
+	}
+	#contact-form select{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		-webkit-appearance: none;
+		background: url("../img/select.png") center right no-repeat;
+	}
+
+	#contact-form input, 
+	#contact-form select, 
+	#contact-form textarea {
+		color: #DEDEDE;
+		width: 92%;
+		margin: 0px 4% 16px 4%;
+		margin: 0px 4% 1rem 4%;
+		font-size: 14px;
+		font-size: 0.875rem;
+		border: 1px solid #444444;
+		background-color: #555555;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+		&:focus{
+			border: 1px solid $maincolor;
+			outline: none;
+			background-color: #666666;
+		}
+	}
+
+	#contact-form textarea {
+		height: 128px;
+		resize: vertical; 
+	}
+
+	#contact-form label {
+		display:block;
+	}
+
+	#contact-form .required {
+		font-weight: 700;
+		color: $maincolor;	
+	}
+
+	#contact-form #submit-button {
+		display: inline;
+		width: 128px;
+		width: 8rem;
+		background-color: #444444;
+		color: #FFFFFF;
+		border: none;
+		margin: 0px 4%;
+		float: right;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+		cursor: pointer;
+		&:hover{
+			background-color: $maincolor;
+		}
+	}
+
+	#errors {
+		border:solid 1px $maincolor;
+		margin: 16px 4%;
+		display:block;
+		width: 92%;
+		display:none;
+		background-color: #555555;
+	}
+
+	#errors li {
+		padding: 2px;
+		list-style:none;	
+	}
+
+	#errors li:before {
+		content: ' - ';	
+	}
+
+	#errors #info {
+		font-weight:700;
+	}
+
+	#errors #info:before {
+		content: '';	
+	}
+
+	#success {
+		border:solid 1px $maincolor;
+		margin: 16px 4%;
+		display: block;
+		width: 92%;
+		background-color: #555555;
+		font-weight: 700;
+		display: none;
+		p{
+			padding: 2px;
+		}
+	}
+
+	#errors.visible, #success.visible {
+		display: block;	
+	}
+	#req-field-desc{
+		padding-left: 4%;
+	}
+
+	// Social media
+	.socialmediawrapper{
+		width: 100%;
+		float: left;
+		margin-bottom: 64px;
+		margin-bottom: 4rem;
+		.socialmedia{
+			width: 160px;
+			width: 10rem;
+			height: 80px;
+			height: 5rem;
+			margin: auto;
+			img{
+				height: 64px;
+				height: 4rem;
+				width: 64px;
+				width: 4rem;
+				padding: 8px;
+				padding: 0.5rem;
+				float: left;
+				border-style: solid;
+				-webkit-transition: 0.4s;
+				-moz-transition: 0.4s;
+				-ms-transition: 0.4s;
+				-o-transition: 0.4s;
+				transition: 0.4s;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				border-radius: 32px;
+				-moz-border-radius: 32px;
+				-webkit-border-radius: 32px;
+				border-color: #FFFFFF;
+				&:hover{
+					border-width: 12px;
+				}
+			}
 		}
 	}
 
@@ -615,11 +802,13 @@ section {
 		min-height: 100%;
 		margin-top: 64px;
 		margin-top: 4em;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 	.imagecontainer{
 		position: relative;
 		margin-bottom: 0.333%;
-		 background-size: 48px 100%;
+		background-size: 48px 100%;
 		p{
 			position: absolute;
 		    left: 0px;

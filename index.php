@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -18,6 +19,21 @@
 		<link rel="stylesheet" href="css/style.css">
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<style>
+				.harrybiotext, .jakebiotext{
+					padding: 16px;
+					margin: 0px;
+				}
+				.controls{
+					display: none;
+				}
+				.icon{
+					background: url(img/logoie.png);
+				}
+				.contactformwrapper{
+					margin-top: 64px;
+				}
+			</style>
 		<![endif]-->
 
 	</head>
@@ -29,7 +45,7 @@
 			<a href="#about" class="link inactive activepage" data-link="about">about</a>
 			<a href="#events" class="link inactive" data-link="events">events</a>
 			<a href="#gallery" class="link inactive" data-link="gallery">gallery</a>
-			<a href="mailto:sandyandbones@gmail.com" class="externallink" target="_blank">contact</a>
+			<a href="" class="link inactive" data-link="contact">contact</a>
 			<a href="https://www.facebook.com/pearlsnbones/app_6452028673" class="externallink hidelinkonmobile" target="_blank">download</a>
 			<div class="controls">
 				<div class="player previous"></div>
@@ -74,8 +90,74 @@
 					<img src="img/jake.png" class="jakeillustration" alt="Jake Oliveira Illustration" id="jake">
 					<div class="jakebiotext" id="jakemobile">
 						<h1>Bones</h1>
-						<h2>Jake Evelyn Oliveira</h2>
+						<h2>Jake Oliveira</h2>
 						<p><span>An upbringing in a heavily music oriented household has helped rapper, multi-instrumentalist, and designer Bones to find his footing in the ever changing eco-system that is the music industry. As a fan of genres such as post-hardcore, folk, indie, EDM, and punk, his eclectic music taste provides the foundation for a special brand of intricate and original wordplay. Lyrically Bones focuses on crafting thought provoking verses that provide substance through metaphors, and double entendres whilst exposing a sincere and unique personality. He has spent the past year writing lyrics and creating custom designed material ranging from album artwork, to merch, to posters, and everything in between in preparation for the duo’s full length album drop.</span></p>
+					</div>
+				</div>
+				
+				<!--email submission form-->
+				<div class="contactformwrapper">
+				<div id="contact-form">
+					<h1>Contact Us</h1>
+					<?php
+					//init variables
+					$cf = array();
+					$sr = false;
+					
+					if(isset($_SESSION['cf_returndata'])){
+						$cf = $_SESSION['cf_returndata'];
+					 	$sr = true;
+					}
+		            ?>
+		            <ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
+		                <li id="info">There were some problems with your form submission:</li>
+		                <?php 
+						if(isset($cf['errors']) && count($cf['errors']) > 0) :
+							foreach($cf['errors'] as $error) :
+						?>
+		                <li><?php echo $error ?></li>
+		                <?php
+							endforeach;
+						endif;
+						?>
+		            </ul>
+		            <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>
+		            <form method="post" action="process.php">
+		                <label for="name">Name: <span class="required">*</span></label>
+		                <input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="Jake Evelyn Oliveira" required/>
+		                
+		                <label for="email">Email: <span class="required">*</span></label>
+		                <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="Jakeevelynoliveira@stagdout.com" required />
+		                
+		                <label for="telephone">Phone: </label>
+		                <input type="tel" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" />
+		                
+		                <label for="enquiry">Subject: </label>
+		                <select id="enquiry" name="enquiry">
+		                    <option value="Tickets" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Tickets') ? "selected='selected'" : '' ?>>Tickets</option>
+		                    <option value="Book" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Book Us') ? "selected='selected'" : '' ?>>Book Us</option>
+		                    <option value="Message" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Message Us') ? "selected='selected'" : '' ?>>Message Us</option>
+		                </select>
+		                
+		                <label for="message">Message: <span class="required">*</span></label>
+		                <textarea id="message" name="message" placeholder="Leave us a message" required data-minlength="20"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
+		                
+		                <input type="submit" value="Send" id="submit-button" />
+		                <p id="req-field-desc"><span class="required">*</span>required fields</p>
+		            </form>
+		            <?php unset($_SESSION['cf_returndata']); ?>
+		        </div>
+		    	</div>
+
+
+				<div class="socialmediawrapper">
+					<div class="socialmedia">
+						<a href="https://www.facebook.com/pearlsnbones" target="_blank">
+							<img src="img/facebook.png" alt="Pearls and Bone's Facebook Page">
+						</a>
+						<a href="https://twitter.com/pearls_bones" target="_blank">
+							<img src="img/twitter.png" alt="Pearls and Bone's Twitter">
+						</a>
 					</div>
 				</div>
 				<div class="aboutfooter">Designed by John Jacob Designs &mdash; <a href="http://johnjacob.ca/">Johnjacob.ca</a></div>
@@ -103,7 +185,7 @@
 				<!--format: MM/DD/YYYY &mdash; Venue/name-->
 					<li>
 						<p>
-						<span class="leftcolumn">12/15/2012 &mdash; Opening for MGK in Hamilton</span>
+						<span class="leftcolumn">12/15/2012 &mdash; Opening for Machine Gun Kelly in Hamilton</span>
 						<br>
 						</p>
 					</li>
@@ -139,8 +221,8 @@
 
 					<li class="center openingtransitionparagraph">
 						<div class="imagecontainer">
-							<img src="img/harrymixing.jpg" alt="Sandy Pearlman mixing">
-							<p>Sandy Pearlman mixing</p>
+							<img src="img/studio.jpg" alt="">
+							<p>Studio session</p>
 						</div>
 						<div class="imagecontainer">
 							<img src="img/jakeshoe.jpg" alt="Kicking ass and having class">
@@ -162,12 +244,12 @@
 
 					<li class="right openingtransitionparagraph">
 						<div class="imagecontainer">
-							<img src="img/studio.jpg" alt="">
-							<p>Studio session</p>
-						</div>
-						<div class="imagecontainer">
 							<img src="img/jakestudio.jpg" alt="">
 							<p>Stag in the headlights</p>
+						</div>
+						<div class="imagecontainer">
+							<img src="img/harrymixing.jpg" alt="Sandy Pearlman mixing">
+							<p>Sandy Pearlman mixing</p>
 						</div>
 						<div class="imagecontainer">
 							<img src="img/harrysitting.jpg" alt="">
